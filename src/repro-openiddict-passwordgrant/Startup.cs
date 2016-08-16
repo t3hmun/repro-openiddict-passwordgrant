@@ -33,7 +33,7 @@ namespace repro_openiddict_passwordgrant
 
             // Add the database context, defaults to scoped; new context for each request.
             services.AddDbContext<ApplicationDbContext>(
-                options => { options.UseSqlServer(Configuration.GetConnectionString("qbdb")); });
+                options => { options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")); });
 
             // Adds Identity to IoC and confugres with the database.
             services.AddIdentity<ApplicationUser, IdentityRole>()
