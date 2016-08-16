@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace repro_openiddict_passwordgrant.Controllers
@@ -18,9 +20,14 @@ namespace repro_openiddict_passwordgrant.Controllers
 
         // GET api/values
         [HttpGet("[action]")]
-        public string Hello()
+        public async Task<string> Hello()
         {
-            return "hello";
+            using (var client = new HttpClient())
+            {
+                var request = new HttpRequestMessage(HttpMethod.Get, "http://localhost:55542/api/test");
+                var response = await client.SendAsync(request);
+                return await response.Content.ReadAsStringAsync();
+            }
         }
 
     }
