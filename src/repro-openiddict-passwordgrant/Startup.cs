@@ -1,6 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -65,6 +66,12 @@ namespace repro_openiddict_passwordgrant
             app.UseOpenIddict(); // OpenIddict takes care of the token issuing.
 
             app.UseMvc();
+            
+            // Simple universal fall through.
+            app.Run(async context =>
+            {
+                await context.Response.WriteAsync("how is this relevant?");
+            });
         }
 
         /// <summary>Initialises admin user and roles.</summary>
