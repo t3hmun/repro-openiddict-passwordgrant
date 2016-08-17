@@ -8,7 +8,7 @@ using repro_openiddict_passwordgrant.Models;
 namespace reproopeniddictpasswordgrant.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160816174959_initial")]
+    [Migration("20160817093818_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
