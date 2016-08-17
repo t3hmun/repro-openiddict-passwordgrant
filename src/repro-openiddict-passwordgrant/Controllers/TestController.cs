@@ -8,7 +8,7 @@ namespace repro_openiddict_passwordgrant.Controllers
     [Route("api/[controller]")]
     public class TestController : Controller
     {
-        private const string Localhost = "http://localhost:55542/";
+        private const string Localhost = "http://localhost:50417/";
 
         [HttpGet]
         public string Get()
