@@ -11,7 +11,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/test",
+      "launchUrl": "api/test/token",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -19,7 +19,7 @@
     "repro_openiddict_passwordgrant": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "http://localhost:5000/api/test",
+      "launchUrl": "http://localhost:5000/api/test/token",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }

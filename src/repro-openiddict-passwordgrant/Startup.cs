@@ -41,7 +41,7 @@ namespace repro_openiddict_passwordgrant
                 .AddDefaultTokenProviders();
 
             services.AddOpenIddict<ApplicationUser, ApplicationDbContext>()
-                .EnableTokenEndpoint("/token") // Password grant route
+                .EnableTokenEndpoint("/auth/token") // Password grant route
                 .AllowPasswordFlow() // Enables password grant
                 .DisableHttpsRequirement()
                 .AddEphemeralSigningKey();

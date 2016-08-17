@@ -19,7 +19,7 @@
     "microsoft.EntityFrameworkCore.Design": "1.0.0-preview2-final",
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0",
-    "OpenIddict": "1.0.0-*"
+    "OpenIddict": "1.0.0-alpha2-0417"
   },
 
   "tools": {
